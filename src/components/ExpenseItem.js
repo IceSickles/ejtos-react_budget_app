@@ -17,11 +17,21 @@ const ExpenseItem = (props) => {
             name: name,
             cost: 10,
         };
-
-        dispatch({
+    dispatch({
             type: 'ADD_EXPENSE',
             payload: expense
         });
+    
+    const decreaseAllocation = (name) => {
+        const expense = {
+            name: name,
+            cost: 10,
+        };
+    dispatch({
+        type: 'DECREASE_EXPENSE',
+        payload: expense
+    })
+    };
 
     }
 
@@ -37,3 +47,4 @@ const ExpenseItem = (props) => {
 };
 
 export default ExpenseItem;
+
